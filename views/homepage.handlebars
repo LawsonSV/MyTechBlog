@@ -1,10 +1,10 @@
-{{#each blog as |blog| }}
+{{#each blogs as |blog| }}
 <div class="row mb-4 blog">
     <div class="col-md-5">
         <h2>
             <a href="/blog/{{blog.id}}">{{blog.title}}</a>
         </h2>
-        <p>Created by {{blog.user_name}}, created on {{format_date project.date_created}}</p>
+        <p>Created by {{blog.user_name}}</p>
     </div>
     <div class="col-md-7">
         <p>

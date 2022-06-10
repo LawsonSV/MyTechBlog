@@ -1,13 +1,13 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#blog-name').value.trim();
-    const description = document.querySelector('#blog-desc').value.trim();
+    const title = document.querySelector('#blog-name').value.trim();
+    const content = document.querySelector('#blog-desc').value.trim();
 
-    if (name && description) {
+    if (title && content) {
         const response = await fetch(`/api/blog`, {
             method: 'POST',
-            body: JSON.stringify({ name, description }),
+            body: JSON.stringify({ title, content }),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -16,7 +16,7 @@ const newFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {
-            alert('Failed to create project');
+            alert('Failed to create blog post');
         }
     }
 };
