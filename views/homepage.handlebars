@@ -4,12 +4,14 @@
         <h2>
             <a href="/blog/{{blog.id}}">{{blog.title}}</a>
         </h2>
-        <p>Created by {{blog.user_name}}</p>
     </div>
     <div class="col-md-7">
-        <p>
+        <h4>
             {{blog.content}}
-        </p>
+        </h4>
+    </div>
+    <div>
+        <p>Created by {{blog.user.name}}</p>
     </div>
 </div>
 {{/each}}
