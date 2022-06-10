@@ -18,4 +18,8 @@ if (process.env.JAWSDB_URL) {
     );
 }
 
+module.exports = {
+    publicPath: "/public/"
+  }
+
 module.exports = sequelize;
